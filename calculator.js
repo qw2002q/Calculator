@@ -139,12 +139,19 @@ function Equal(){
   try{
     result = eval(text) + ''; //转为字符串
     clearAll();
-    content.innerText = result;
     count = result.length;
-    if(result.search(/\./) > 0) Is_dot = [1];
+    if(result.search(/\./) > 0) {
+      Is_dot = [1];
+      if(result.split('.')[1].length > 16){   //小数点后的精度为9
+        result = (+result).toFixed(16); // (+result) 为 result的 number形式
+                                       // 相当于 ( 0 + result )
+      }
+    }
     else Is_dot = [0];
     Is_dot_length = 1;
     Is_Output = 1;
+    result = eval(result);
+    content.innerText = result;
   }
   catch(anything){
     content.innerText = "MATH ERROR";
