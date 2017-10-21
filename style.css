@@ -1,0 +1,41 @@
+button{
+  width: 80px;
+  height: 72px;
+  font-size: 20px;
+}
+
+#calculator{
+  background-color: gray;
+  width: 322px;
+  height: 462px;
+  margin: 200px auto;
+}
+
+#screen{
+  background-color: rgb(220,220,220);
+  width: 320px;
+  height: 100px;
+  overflow: hidden;
+}
+
+#screen>p{
+  margin: auto;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+  transform: translate(3px, 28px);
+}
+
+#input-btn{
+  overflow: hidden;
+  width: 320px;
+  height: 360px;
+  text-align: center;
+}
+
+.row{
+  font-size: 0px; /*消除button之间间距*/
+  overflow: hidden;
+  width: 320px;
+  height: 72px;
+}
