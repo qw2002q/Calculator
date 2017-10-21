@@ -116,6 +116,7 @@ function InputBracket(input)
       && content.innerText.slice(count - 1, count) != '-'
       && content.innerText.slice(count - 1, count) != '×'
       && content.innerText.slice(count - 1, count) != '÷'
+      && content.innerText.slice(count - 1, count) != '('
       && content.innerText.slice(conut - 1, count) == '.')
     {
       alert('Error:错误的输入位置');
